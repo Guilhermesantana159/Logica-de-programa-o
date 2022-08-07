@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_1
+{
+    class Program
+    {
+        public static void media(List <int> notas)
+        {
+            int media = 0;
+            foreach(int i in notas)
+            {
+                media += i; 
+            }
+
+            media /= notas.Count();
+            if (media > 6)
+            {
+                Console.WriteLine("O aluno está Aprovado com média de : " + media);
+            }
+            else
+            {
+                Console.WriteLine("O aluno está Reprovado com média de : " + media);
+            }
+        }
+        static void Main(string[] args)
+        {
+            List <int> notas = new List <int>();
+            notas.Add(10);
+            notas.Add(8);
+            notas.Add(7);
+
+            media(notas);
+
+            Console.ReadLine();
+        }
+    }
+}

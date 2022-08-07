@@ -1,0 +1,76 @@
+resp=str("sim")
+while resp=="sim":
+  print("=================================================================")
+  print("                            Calculadora                          ")
+  print("=================================================================")
+  print("Soma [1] Subtração [2] Multiplicação [3] Media[4] Potenciação [5]")
+  print("Raiz quadrada [6] Seno [7] Cos [8] Tang [9]")
+  sel=int(input("Por favor selecione a operação que você deseja realizar: "))
+  x=str(input("Digite um valor: "))
+  import math
+  if x=="pi":
+    x=math.pi
+  else:
+    x=float(x)
+  if sel==1:
+    y=str(input("Digite o segundo valor: "))
+    if y=="pi":
+      y=math.pi
+    else:
+      y=float(y)
+    r=x+y
+    print(x,"+",y,"=",r)
+    resp=str(input("Deseja realizar outra operação "))
+  elif sel==2:
+    y=str(input("Digite o segundo valor: "))
+    if y=="pi":
+      y=math.pi
+    else:
+      y=float(y)
+    r=x-y
+    print(x,"-",y,"=",r)
+    resp=str(input("Deseja realizar outra operação "))
+  elif sel==3:
+    y=str(input("Digite o segundo valor: "))
+    if y=="pi":
+      y=math.pi
+    else:
+      y=float(y)
+    r=x*y
+    print(x,"x",y,"=",r)
+    resp=str(input("Deseja realizar outra operação "))
+  elif sel==4:
+    y=str(input("Digite o segundo valor: "))
+    if y=="pi":
+      y=math.pi
+    else:
+      y=float(y)
+    r=(x+y)/2
+    print("(",x,"+",y,")/2=",r)
+    resp=str(input("Deseja realizar outra operação "))
+  elif sel==5:
+    y=str(input("Digite o expoente: "))
+    if y=="pi":
+      y=math.pi
+    else:
+      y=float(y)
+    r=x**y
+    print(x,"**",y,"=",r)
+    resp=str(input("Deseja realizar outra operação "))
+  elif sel==6:
+    r=math.sqrt(x)
+    print("Sua raiz é:",r)
+    resp=str(input("Deseja realizar outra operação "))
+  elif sel==7:
+    r=math.sin(x)
+    print("Seu seno é:",r)
+    resp=str(input("Deseja realizar outra operação "))
+  elif sel==8:
+    r=math.cos(x)
+    print("Seu cosseno é:",r)
+    resp=str(input("Deseja realizar outra operação "))
+  elif sel==9:
+    r=math.tan(x)
+    print("Sua Tangente é:",r)
+    resp=str(input("Deseja realizar outra operação "))
+print("Até a próxima ;)")

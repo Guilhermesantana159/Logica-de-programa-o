@@ -1,0 +1,54 @@
+def ler_alunos(x):
+    alunos = []
+    for i in range(x):
+        alunos.append(ler_aluno())
+    return alunos        
+def ler_aluno():
+    aluno = []
+    notas = []
+    ind = 1
+    print("=====================================")
+    nome = str(input("Digite o nome do aluno: "))
+    aluno.append(nome) 
+    for x in range(3):
+        print("Digite as",ind,"º notas: ")
+        nota = float(input())
+        notas.append(nota)
+        ind = ind + 1
+    aluno.append(notas)
+    return aluno
+def calcular_media_aluno(media):
+    i = 0
+    soma = 0
+    for x in media:
+        soma = media[i] + soma
+        i = 1 + i
+    media = soma/3
+    return media
+        
+    
+def imprimir_medias(lista):
+    i = 0
+    print("=====================================")
+    for x in lista:
+        lista_item = lista[i]
+        print(lista_item[0],calcular_media_aluno(lista_item[1]))
+        i = i + 1
+def calcular_media_turma(lista):
+    i = 0
+    media_turma = 0
+    for x in lista:
+        lista_item = lista[i]
+        media_turma = calcular_media_aluno(lista_item[1]) + media_turma
+        i = i + 1
+    return print("A média da turma será:", media_turma/num_alunos)
+
+ 
+print("============================")
+print("           Escola           ")
+print("============================")
+num_alunos = int(input("Digite o número de alunos : "))
+lista_alunos = ler_alunos(num_alunos)
+imprimir_medias(lista_alunos) 
+calcular_media_turma(lista_alunos) 
+

@@ -1,0 +1,16 @@
+algoritmo "semnome"
+var
+X,Y,Z,F,CONT:REAL
+inicio
+X<-500
+Y<-0
+ESCREVAL(X)
+Z<-(500-0)/50
+F<-(X+Y)*Z/2
+ENQUANTO X>Y FACA
+X<-X-50
+CONT<-X
+ESCREVAL(CONT)
+FIMENQUANTO
+ESCREVAL("A SOMA DE TODOS SERA: ",F)
+fimalgoritmo

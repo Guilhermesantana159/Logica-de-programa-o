@@ -1,0 +1,16 @@
+algoritmo "5"
+var
+X,Y,Z:REAL
+
+inicio
+ESCREVAL(" DIGITE A PRIMEIRA NOTA:")
+LEIA(X)
+ESCREVAL(" DIGITE A SEGUNDA NOTA:")
+LEIA(Y)
+Z<-(X+Y)/2
+ESCREVAL(" A MEDIA ENTRE ",X," E ",Y," E IGUAL A: ",Z)
+
+
+
+
+fimalgoritmo

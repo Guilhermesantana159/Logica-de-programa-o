@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> age = new List<int>();
+            List<string> names = new List<string>();
+            Console.WriteLine("Insira o nome da pessoa e após a sua idade:");
+            for (int i=0;i<5;i++)
+            {
+                names.Add(Console.ReadLine());
+                age.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+
+            foreach (int i in age)
+            {
+                Console.WriteLine("Pessoa: " + names[age.IndexOf(i)]+ " " + i);
+            }
+            Console.ReadLine();
+        }
+    }
+}

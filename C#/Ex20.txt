@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+
+namespace Lista2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> notas = new List<int>();
+            List<string> nomes = new List<string>();
+            List<float> média = new List<float>();
+            float mediaTurma = 0;
+            int x = 0;
+
+            Console.WriteLine("=========================");
+            Console.WriteLine("=======Média80Alunos=====");
+            Console.WriteLine("=========================");
+            for (int i=0;i<2;i++)
+            {
+                Console.WriteLine("Digite nome do " + i + "º Pessoa");
+                string nome = Console.ReadLine();
+                nomes.Add(nome);
+                for (int a=0;a<2;a++)
+                {
+                    Console.WriteLine("Digite a " + a + "º nota");
+                    int nota = Convert.ToInt32(Console.ReadLine());
+                    notas.Add(nota);
+                }
+            }
+            for (int i = 0; i < nomes.Count; i++)
+            {
+                float m = notas[x] + notas[x + 1];
+                média.Add(m/2);
+                x = x + 2;
+            }
+           for(int i=0;i<nomes.Count;i++)
+            {
+                Console.WriteLine("O aluno " + nomes[i] + " obteve de média " + média[i]);
+            }
+
+            foreach (float i in média)
+            {
+                mediaTurma = mediaTurma + i;
+            }
+            Console.WriteLine("Média da turma: " + mediaTurma/nomes.Count);
+        }
+    }
+}

@@ -1,0 +1,11 @@
+algoritmo "semnome"
+var
+SOMA,X:INTEIRO
+inicio
+REPITA
+ESCREVAL("DIGITE NUMEROS:")
+LEIA(X)
+LIMPATELA
+SOMA<-SOMA+X
+ATE(SOMA=1)
+fimalgoritmo

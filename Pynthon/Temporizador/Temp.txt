@@ -1,0 +1,18 @@
+print("=====================================")
+print("           Temporizador              ")
+print("=====================================")
+m=int(input("Digite quantos minutos deseja:"))
+s=int(input("Digite quantos segundos deseja:"))
+if s>60:
+  print("Número inválido")
+  m=-1
+
+while m>=0:
+  if m==0 and s==0:
+    print("Tempo esgotado!!")
+    break
+  if s<0:
+    m=m-1
+    s=59
+  print(m," Minutos ",s," Segundos")
+  s=s-1

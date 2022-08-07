@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_1
+{
+    class Program
+    {
+        public static int SomaNumero(List<int> numeros)
+        {
+            int soma = 0;
+            foreach (int i in numeros)
+            {
+                soma += i;
+            }
+            return soma;
+        }
+        static void Main(string[] args)
+        {
+
+            List<int> numeros = new List<int>();
+            numeros.Add(5);
+            numeros.Add(4);
+            numeros.Add(2);
+            numeros.Add(1);
+
+            Console.WriteLine(SomaNumero(numeros));
+
+            Console.ReadLine();
+        }
+    }
+}

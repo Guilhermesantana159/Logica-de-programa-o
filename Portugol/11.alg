@@ -1,0 +1,19 @@
+algoritmo "11"
+var
+A,B,C,D:REAL
+
+inicio
+ESCREVAL(" DIGITE O VALOR DE A:")
+LEIA(A)
+ESCREVAL(" DIGITE O VALOR DE B:")
+LEIA(B)
+ESCREVAL(" DIGITE O VALOR DE C:")
+LEIA(C)
+D<-B^2-4*C*A
+ESCREVAL(" O VALOR DE DELTA E:",D)
+
+
+
+
+
+fimalgoritmo

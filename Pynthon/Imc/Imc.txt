@@ -1,0 +1,26 @@
+def imc(peso,altura):
+    return peso/(altura**2)
+def faixa(x):
+    if (x > 16) and (x < 17):
+        return print(" Você esta muito abaixo do peso")
+    elif (x > 17) and (x < 18.5):
+        return print("Você esta abaixo do peso")
+    elif (x > 18.5) and (x < 25):
+        return print("Você esta com peso normal")
+    elif (x > 25) and (x < 30):
+        return print("Você esta acima do peso")
+    elif (x > 30) and (x < 35):
+        return print("Você esta com obesidade grau I")
+    elif (x > 35) and (x < 40):
+        return print("Você esta com obesidade grau II")
+    elif (x > 40):
+        return print("Você esta com obesidade grau III")
+    else:
+        return print("Altura e peso incompatível com o imc")
+print("=======================================")
+print("                IMC                    ")
+print("=======================================")
+x = float(input("Digite seu Peso: "))
+y = float(input("Digite sua altura: "))
+faixa(imc(x,y))
+    

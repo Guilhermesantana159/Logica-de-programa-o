@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_1
+{
+    class Program
+    {
+        public static int Soma(List<int> nota)
+        {
+            return nota[0] + nota[1];
+        }
+        public static int Subtração(List<int> nota)
+        {
+            return nota[0] - nota[1];
+        }
+        public static int Divisão(List<int> nota)
+        {
+            return nota[0] / nota[1];
+        }
+        public static int Potenciação(List<int> nota)
+        {
+            return nota[0] ^ nota[1];
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("==========================");
+            Console.WriteLine("      Calculadora");
+            Console.WriteLine("==========================");
+            Console.WriteLine("Digite a operação que deseja realizar:");
+            Console.WriteLine("[1] Soma [2] Subtração [3] Divisão [4] Potenciação ");
+            int opc = Convert.ToInt32(Console.ReadLine());
+            List<int> nota = new List<int>();
+            Console.WriteLine("Digite os dois números para a operação");
+
+            nota.Add(Convert.ToInt32(Console.ReadLine()));
+            nota.Add(Convert.ToInt32(Console.ReadLine()));
+            switch (opc)
+            {
+                case 1:
+                    Console.WriteLine(Soma(nota));
+                    break;
+                case 2:
+                    Console.WriteLine(Subtração(nota));
+                    break;
+                case 3:
+                    Console.WriteLine(Divisão(nota));
+                    break;
+                case 4:
+                    Console.WriteLine(Potenciação(nota));
+                    break;
+                default:
+                    Console.WriteLine("Opção não disponivel");
+                    break;
+            }
+            Console.ReadLine();
+        }
+    }
+}

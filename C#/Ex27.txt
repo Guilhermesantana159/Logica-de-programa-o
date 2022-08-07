@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+
+namespace Lista2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> salAntigo = new List<int>();
+            List<float> salNovo = new List<float>();
+            List<string> funcionarios = new List<string>();
+            const float reajuste = 0.08F;
+
+            Console.WriteLine("==============Reajuste=============");
+            Console.WriteLine("Adcione o funcionário e seu antigo salário antes do reajuste");
+            for (int i=0;i<5;i++)
+            {
+                Console.WriteLine(i + "º Funcionário:" );
+                string func = Console.ReadLine();
+                funcionarios.Add(func);
+                Console.WriteLine(i + "º Salário:");
+                int sal = Convert.ToInt32(Console.ReadLine());
+                salAntigo.Add(sal);
+            }
+            foreach (int i in salAntigo)
+            {
+                salNovo.Add(i + i * reajuste);
+            }
+            Console.WriteLine("============ApósReajuste==========");
+            foreach (float i in salNovo)
+            {
+                Console.WriteLine( funcionarios[salNovo.IndexOf(i)]+":"+ i);
+            }
+        }
+    }
+}

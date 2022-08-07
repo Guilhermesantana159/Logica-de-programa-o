@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+
+namespace Lista2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> conjuntos = new List<int>();
+            int maior = 0;
+            int menor = 0;
+
+
+            Console.WriteLine("============>Soma<===========");
+            Console.WriteLine("Adicione 10 números");
+            for (int i=0;i<10;i++)
+            {
+                int number = Convert.ToInt32(Console.ReadLine());
+                conjuntos.Add(number);
+            }
+            foreach (int i in conjuntos)
+            {
+                if (i > maior || maior == 0)
+                {
+                    maior = i;
+                }else if (i < menor || menor == 0)
+                {
+                    menor = i;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+
+            Console.WriteLine("A posição do maior número " + conjuntos.IndexOf(maior)
+                + " Posição do menor: " + conjuntos.IndexOf(menor));
+        }
+    }
+}

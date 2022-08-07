@@ -1,0 +1,30 @@
+print("=================================")
+print("             Listas              ")
+print("=================================")
+x = 0
+lista = [] 
+while x>=0:
+  x=float(input("Digite os elementos: "))
+  lista.append(x)
+pos=0
+lista.pop(len(lista)-1)
+for i in range(len(lista)):
+  print(pos,"º Posição Elemento:",lista[i])
+  pos=pos+1
+print("Agora mova o elemento para a posição que deseja:")
+y=int(input("Digite a posição do elemento que você deseja mover: "))
+z=int(input("Digite a posição de destino: "))
+lista1=lista.copy()
+lista1.pop(y)
+lista[z]=lista[y]
+if z>y:
+  lista2=lista1[:z]
+  lista3=lista[z:]
+  lista2.extend(lista3)
+else:
+  lista1.insert(z,lista[y])
+  lista2=lista1
+pos=0
+for i in range(len(lista2)):
+  print(pos,"º Posição Elemento:",lista2[i])
+  pos=pos+1

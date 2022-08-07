@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> notas = new List<int>();
+
+            Console.WriteLine("Insira 10 notas dos alunos");
+            for (int i=0;i<10;i++)
+            {
+                notas.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+            foreach (int i in notas)
+            {
+                Console.WriteLine(i);
+            }
+            Console.ReadLine();
+        }
+    }
+}

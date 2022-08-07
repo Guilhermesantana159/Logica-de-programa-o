@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> A = new List<int>();
+            List<int> B = new List<int>();
+
+            Console.WriteLine("Informe 10 números");
+            for (int i=0;i<=10;i++)
+            {
+                A.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+            foreach (int i in A)
+            {
+                B.Add(i*3);
+            }
+            foreach (int i in B)
+            {
+                Console.WriteLine(i);
+            }
+            Console.ReadLine();
+        }
+    }
+}

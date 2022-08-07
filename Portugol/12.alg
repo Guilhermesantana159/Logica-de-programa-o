@@ -1,0 +1,13 @@
+algoritmo "12"
+var
+A,B:REAL
+inicio
+ESCREVAL(" DIGITE O VALOR DO PRODUTO:")
+LEIA(A)
+B<-A-A*0.05
+ESCREVAL(" PRECO PROMOCIONAL DO PRODUTO:",B)
+
+
+
+
+fimalgoritmo

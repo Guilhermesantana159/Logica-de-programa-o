@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string string1 = "Ola";
+            string string2 = "Ola";
+
+            if (string1 == string2)
+            {
+                Console.WriteLine("True1");
+            }
+
+            if (string1.Equals(string2))
+            {
+                Console.WriteLine("True2");
+            }
+            Console.ReadLine();
+        }
+    }
+}

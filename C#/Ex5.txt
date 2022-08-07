@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_1
+{
+    class Program
+    {
+        public static bool Verification(int number)
+        {
+            for (int i=1;i<number;i++)
+            {
+                if (number%i == 0 && i!=number && i!=1)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("===============================");
+            Console.WriteLine("       Número Primo");
+            Console.WriteLine("===============================");
+            Console.WriteLine("Digite um número para verificar se é primo: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            if (Verification(number))
+            {
+                Console.WriteLine("Este número é primo");
+            }
+            else
+            {
+                Console.WriteLine("Este número não é primo");
+            }
+            Console.ReadLine();
+        }
+    }
+}

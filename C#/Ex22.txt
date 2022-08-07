@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+
+namespace Lista2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> vetor1 = new List<int>();
+            List<int> vetor2 = new List<int>();
+            List<int> vetorSoma = new List<int>();
+
+            Console.WriteLine("=======VetorSoma=======");
+            Console.WriteLine("Adcione 5 elemento no 1º vetor");
+            for (int i=0;i<5;i++)
+            {
+                int element = Convert.ToInt32(Console.ReadLine());
+                vetor1.Add(element);
+            }
+            Console.WriteLine("Adcione 5 elemento no 2º vetor");
+            for (int i = 0; i < 5; i++)
+            {
+                int element = Convert.ToInt32(Console.ReadLine());
+                vetor2.Add(element);
+            }
+            for (int i =0;i<vetor1.Count;i++) 
+            {
+                vetorSoma.Add(vetor1[i] + vetor2[i]);
+                Console.WriteLine("======================");
+                Console.WriteLine(vetorSoma[i]);
+            }
+        }
+    }
+}

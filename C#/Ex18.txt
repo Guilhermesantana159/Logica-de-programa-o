@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+
+namespace Lista2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> clients = new List<string>();
+            List<int> ages = new List<int>();
+            List<string> sexs = new List<string>();
+            int menor = 0;
+            int personF18 = 0;
+            int personM18 = 0;
+
+            Console.WriteLine("===================");
+            Console.WriteLine("=======Clientes======");
+            Console.WriteLine("===================");
+            for (int i = 0; i < 10;i++)
+            {
+                Console.WriteLine("Digite o nome do " + i + "º Cliente");
+                string name = Console.ReadLine();
+                clients.Add(name);
+                Console.WriteLine("Digite a idade do " + i + "º Cliente");
+                int age = Convert.ToInt32(Console.ReadLine());
+                ages.Add(age); 
+                Console.WriteLine("Digite o sexo do " + i + "º Cliente");
+                string sex = Console.ReadLine();
+                sexs.Add(sex);
+            }
+            foreach (int i in ages)
+            {
+                if (menor == 0 || i < menor)
+                {
+                    menor = i;
+                }
+            }
+            Console.WriteLine("O cliente com menor idade é " + clients[ages.IndexOf(menor)] + " com " + menor + " anos");
+            Console.WriteLine("Clientes masculinos com mais de 18: ");
+            foreach (int i in ages)
+            {
+                if (i > 18)
+                {
+                    if (sexs[ages.IndexOf(i)] == "M")
+                    {
+                        Console.WriteLine("*" + clients[ages.IndexOf(i)]);
+                        personF18++;
+                    }
+                    else
+                    {
+                        personM18++;
+                    }
+                }
+            }
+            Console.WriteLine("Masculino com mais de 18: " + personM18 + "\nFeminino com mais de 18: " + personF18);
+        }
+    }
+}

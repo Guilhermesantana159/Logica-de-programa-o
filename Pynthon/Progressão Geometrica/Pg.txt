@@ -1,0 +1,22 @@
+def funçãopg():
+    print("=============================================")
+    print("         Progressão geométrica               ")
+    print("=============================================")
+
+    a1=int(input("Digite o primeiro elemento:"))
+    q=int(input("Agora digite a razão:"))
+    n=int(input("Digte o elemento que você deseja:"))
+    an=int(a1*(q**(n-1)))
+    sn=int(a1*((q**n)-1)/(q-1))
+    print("O valor do elemento ",n," é igual: ",an)
+    print("A soma dos elementos é: ",sn)
+    
+
+resp="sim"
+
+while resp=="sim":
+    funçãopg()
+    resp=str(input("Deseja fazer outra operação? [sim] [não]"))
+else:
+    print("Até a próxima ;)")
+   

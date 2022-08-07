@@ -1,0 +1,17 @@
+algoritmo "semnome"
+var
+X,Y,CONT:INTEIRO
+inicio
+X<-31
+Y<-1
+ENQUANTO X>=Y FACA
+CONT<-X-1
+SE CONT%4=0 ENTAO
+ESCREVA("[",CONT,"]")
+SENAO
+ESCREVA(" " ,CONT)
+FIMSE
+X<-CONT
+FIMENQUANTO
+ESCREVAL(" ACABOU!")
+fimalgoritmo

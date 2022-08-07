@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> sex = new List<string>();
+            int masc = 0;
+            int fem = 0;
+            int outhers = 0;
+
+            Console.WriteLine("Informe 30 sexos de pessoas com [m] ou [f]");
+            for (int i=0;i<=30;i++)
+            {
+                sex.Add(Console.ReadLine());
+            }
+            foreach (string i in sex)
+            {
+                if (i == "m" || i== "M")
+                {
+                    masc++;
+                }else if(i == "f" || i == "F")
+                {
+                    fem++;
+                }
+                else
+                {
+                    outhers++;
+                }
+            }
+            Console.WriteLine("Maculino: " + masc + " Feminino: " + fem + " Outros:" + outhers);
+            Console.ReadLine();
+        }
+    }
+}

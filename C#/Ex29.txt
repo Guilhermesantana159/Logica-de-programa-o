@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+
+namespace Lista2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> obj = new List<string>();
+            obj.Add("*");
+            for (int i = 0;i<10;i++)
+            {
+                obj.Add(obj[i] + "*");
+            }
+            foreach (string i in obj)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}

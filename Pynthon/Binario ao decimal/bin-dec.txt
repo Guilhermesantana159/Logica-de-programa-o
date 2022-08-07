@@ -1,0 +1,27 @@
+resp="sim"
+while resp=="sim":
+  print("==================================")
+  print("         Conversor Binário        ")
+  print("==================================")
+  x=int(input("Digite o número binário para conversão: "))
+  lista=[int(i) for i in str(x)]
+  b=lista.count(1)+lista.count(0)
+  if b < len(lista):
+    print("Digito inválido!!")
+    print("O número ",x," não é binário")
+    break
+  y=(len(lista)-1)
+  i=0
+  total=0
+  while i < len(lista):
+    a=(lista[i])
+    i = i + 1
+    if a==0:
+      y=y-1
+    elif a==1 :
+      z=a*(2**y)
+      total=total+z
+      y=y-1
+  print("O valor em decimal será: ",total)
+  resp=str(input("Deseja realizar outra conversão? [sim] [não] "))
+print("Obrigado por utilizar o conversor!!")

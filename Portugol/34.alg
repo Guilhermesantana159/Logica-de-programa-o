@@ -1,0 +1,28 @@
+algoritmo "semnome"
+var
+X:INTEIRO
+M,N:REAL
+inicio
+ESCREVAL("DIGITE SEU PESO:")
+LEIA(X)
+ESCREVAL("DIGITE SUA ALTURA:")
+LEIA(M)
+N<-X/(M*M)
+SE N<=18.5 ENTAO
+ESCREVAL("VOCE ESTA ABAIXO DO PESO")
+SENAO
+     SE (N>18.5) E (N<=25) ENTAO
+     ESCREVAL("VOCE ESTA COM PESO IDEAL")
+     SENAO
+          SE (N>25) E (N<=30) ENTAO
+          ESCREVAL("VOCE ESTA COM SOBREPESO")
+          SENAO
+               SE (N>30) E (N<=40) ENTAO
+               ESCREVAL("VOCE ESTA COM OBESIDADE")
+               SENAO
+               ESCREVAL("VOCE ESTA COM OBESIDADE MORBIDA")
+               FIMSE
+          FIMSE
+     FIMSE
+FIMSE
+fimalgoritmo

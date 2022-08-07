@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> names = new List<string>();
+            List<int> age = new List<int>();
+
+            Console.WriteLine("Insira o nome e a idade posteriormente de 5 pessoas:");
+            for (int i=0;i<5;i++)
+            {
+                names.Add(Console.ReadLine());
+                age.Add(Convert.ToInt32(Console.ReadLine())); 
+            }
+            Console.WriteLine("Idade dda pessoa mais nova : " + age.Min());
+            Console.WriteLine("Nome dda pessoa mais nova : " + names[age.IndexOf(age.Min())]);
+            Console.ReadLine();
+        }
+    }
+}

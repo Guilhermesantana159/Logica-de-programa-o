@@ -1,0 +1,19 @@
+algoritmo "semnome"
+var
+SOMA,X,Z,Y:INTEIRO
+
+inicio
+Z<-0
+Y<-7
+ENQUANTO Z<Y FACA
+ESCREVAL("DIGITE 7 NUMEROS")
+LEIA(X)
+LIMPATELA
+Z<-Z+1
+SOMA<-X+SOMA
+FIMENQUANTO
+ESCREVAL("A SOMA DELES FOI:",SOMA)
+
+
+
+fimalgoritmo

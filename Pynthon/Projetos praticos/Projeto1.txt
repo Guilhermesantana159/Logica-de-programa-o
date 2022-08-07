@@ -1,0 +1,54 @@
+respo="sim"
+while respo=="sim":  
+  print("======================================")
+  print("             Loja virtual             ")
+  print("======================================")
+  n=str(input("Seja bem vindo a loja digital por favor digite seu nome: "))
+  z=int(input("Digite o número do pedido: "))
+  resp=""
+  x=0
+  while resp!="sair":
+    print(n," digite agora o codigo do produto que deseja comprar de acordo com a tabela abaixo: ")
+    print("==========================================")
+    print("|      Codigo      |       Valor         |")
+    print("==========================================")
+    print("|     1 a 10       |         35          |")
+    print("|     11 a 20      |         50          |")
+    print("|     21 a 30      |         65          |")
+    print("|     31 a 40      |         80          |")
+    print("==========================================")
+    print(" Cliente: ",n," Subtotal:R$",x," Pedido: ",z)
+    print("==========================================")
+    print("Atenção: Se desejar sair digite: sair")
+    resp=input("Digite o codigo que deseja: ")
+    if resp=="sair":
+      break
+    else: 
+      resp=int(resp)
+      if resp<=10:
+        resp=float(resp)
+        x=x+35
+      elif resp<=20 and resp>10:
+        resp=float(resp)
+        x=x+50
+      elif resp<=30 and resp>20:
+        resp=float(resp)
+        x=x+65
+      elif resp<=40 and resp>30:
+        resp=float(resp)
+        x=x+80
+      elif resp<1 or resp>40:
+        print("Digito não encontrado")
+        print("Favor informar um digito válido")
+  if x>150 and x<500:
+    print("Prezado cliente ",n," o valor do pedido ",z," será R$",x)
+    print("E você ganhou frete gratis")
+  elif x>500:
+    x=x-x*0,1
+    y=x*0,1
+    print("Prezado cliente ",n," o valor do pedido ",z," será R$",x)
+    print("Você ganhou ",y," de desconto")
+  else:
+    print("Prezado cliente ",n," o valor do pedido ",z," será R$",x)
+  respo=str(input("Deseja realizar Outra compra?"))
+print("Volte sempre :)") 

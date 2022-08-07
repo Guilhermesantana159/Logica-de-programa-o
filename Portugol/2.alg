@@ -1,0 +1,17 @@
+algoritmo "2"
+
+var
+NOME: CARACTERE
+
+
+
+
+inicio
+ESCREVAL(" OLA QUAL O SEU NOME:")
+LEIA(NOME)
+ESCREVAL("OLA ",NOME,",PRAZER EM TE CONHECER")
+
+
+
+
+fimalgoritmo

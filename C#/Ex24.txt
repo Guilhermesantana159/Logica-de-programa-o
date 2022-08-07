@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+
+namespace Lista2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> conjuntos = new List<int>();
+
+            Console.WriteLine("============>Soma<===========");
+            Console.WriteLine("Adicione 10 números");
+            for (int i=0;i<10;i++)
+            {
+                int number = Convert.ToInt32(Console.ReadLine());
+                conjuntos.Add(number);
+            }
+            conjuntos.Sort();
+            Console.WriteLine("O menor número é: " + conjuntos[0] + " o maior número é: "
+                + conjuntos[conjuntos.Count - 1] + " a soma entre os dois será: " + (conjuntos[0]+ conjuntos[conjuntos.Count - 1]));
+            
+        }
+    }
+}

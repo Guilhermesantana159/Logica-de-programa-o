@@ -1,0 +1,18 @@
+algoritmo "semnome"
+var
+X,Z:REAL
+inicio
+ESCREVAL("DIGITE QUANTAS HORAS VOCE FEZ DE ATIVIDADE FISICA ESTE MES:")
+LEIA(X)
+SE X<=10 ENTAO
+Z<-X*2
+SENAO
+     SE (X>10) E (X<=20) ENTAO
+     Z<-X*5
+     SENAO
+     Z<-X*10
+     FIMSE
+FIMSE
+ESCREVAL("VOCE TEVE",Z," PONTOS,E OBTEVE R$",Z*0.05)
+
+fimalgoritmo

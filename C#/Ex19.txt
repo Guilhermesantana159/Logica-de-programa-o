@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+
+namespace Lista2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> notas = new List<int>();
+            int acc = 0;
+            Console.WriteLine("==========Notas=========");
+            Console.WriteLine("Digite 80 notas:");
+            for (int i = 0;i < 80;i++)
+            {
+                int nota = Convert.ToInt32(Console.ReadLine());
+                notas.Add(nota);
+            }
+            foreach (int i in notas)
+            {
+                Console.WriteLine(i);
+                acc += i;
+            }
+            Console.WriteLine("A média da turma é: " + acc/80);
+        }
+    }
+}

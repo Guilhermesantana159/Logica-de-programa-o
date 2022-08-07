@@ -1,0 +1,71 @@
+perguntas = [
+  ["Qual função do Python é utilizada para ler entradas do teclado?", 1],
+  ["O que uma variável do tipo string (str) armazena?", 3],
+  ["Quem criou o Python?", 3],
+  ["Qual destas funções é um loop?", 1],
+  ["Qual destas funções é uma condição?", 3],
+  ["Qual função permite armazenar mais de uma variável?", 1],
+  ["Como escreve um Comentário no Python?", 2],
+  ["Qual a extensão de um arquivo em Python?", 3],
+  ["Qual o comando para escrever na tela?", 1],
+  ["Qual a função  do Python utilizado para criar váriaveis global dentro de uma função?", 2],
+  ["O que uma variável do tipo int armazena?", 5],
+  ["Qual metodo faz uma string ficar maiúscula?", 4],
+  ["Qual o comando para importar um módulo", 2],
+  ["Qual método remove um elemento de uma lista?", 1],
+  ["O que uma variável do tipo float armazena?", 4],
+            ]
+respostas = [
+  ["input", "read", "scanf", "keyboard", "print"],
+  ["Número de Euler", "Logaritmos", "Caracteres", "Número decimal ", "Números inteiros"],
+  ["Bill Gates", "Linus Torvalds", "Guido van Rossum", "Steve jobs", "Nenhuma das anteriores"],
+  ["for", "continue", "case", "break", "if"],
+  ["while", "read", "if", "keyboard", "for"],
+  ["list", "input", "let", "do", "var"],
+  ["/* */", "#", "@", "__  __", "** **"],
+  [".js", ".css", ".py", ".php", ".html"],
+  ["print", "read", "input", "write", "console.log"],
+  ["Var", "global", "scanf", "let", "Nenhuma das anteriores"],
+  ["Número de Euler", "Logaritmos", "Caracteres", "Número decimal ", "Números inteiros"],
+  ["casefold()", "islower()", "isidentifier()", "upper()", "replace()"],
+  ["input", "Import", "scanf", "While", "print"],
+  ["pop()", "sort()", "append()", "count()", "insert()"],
+  ["Número de Euler", "Logaritmos", "Caracteres", "Número decimal ", "Números inteiros"]  
+]
+resp = "s"
+pgt = 0
+import random
+while resp == "s":
+    acertos = 0
+    erros = 0
+    embaralhador = list(range(len(perguntas)))
+    random.shuffle(embaralhador)
+    indices = embaralhador[:5]
+    cont = 0
+    print("========================================")
+    print("                Quiz                    ")
+    print("========================================")
+    print("Vamos iniciar o Quiz!")
+    for x in indices:
+        i = indices[cont]
+        pergunta = perguntas[i]
+        print(pergunta[0])
+        opcoes = 1
+        z = 0
+        for x in indices:
+             indiceresp = respostas[i]
+             print(opcoes,".",indiceresp[z])
+             opcoes = opcoes + 1
+             z = z + 1
+        respusuario = int(input("Digite a alternativa: "))
+        if (respusuario == pergunta[1]):
+            acertos = acertos + 1
+        else:
+            erros = erros + 1            
+        pgt = pgt +1
+        cont = cont +1
+    print("Sua pontuação foi de ",acertos," acertos e ",erros," erros")
+    if pgt == 15:
+        break
+    resp = input(str("Deseja fazer novas perguntas? [s] [n] "))	
+print("Obrigado por utilizar o Quiz :)")

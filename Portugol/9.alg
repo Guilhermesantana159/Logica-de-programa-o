@@ -1,0 +1,10 @@
+algoritmo "9"
+var
+Z,X:REAL
+inicio
+ESCREVAL(" QUANTOS REAIS VOCE TEM NA CARTEIRA:")
+LEIA(Z)
+X<-Z*3.45
+ESCREVAL(" VOCE PODE COMPRAR ",X," DOLARES")
+
+fimalgoritmo

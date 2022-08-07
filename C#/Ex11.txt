@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> notas = new List<int>();
+            List<string> alunos = new List<string>();
+            Console.WriteLine("==================================");
+            Console.WriteLine("              Array");
+            Console.WriteLine("==================================");
+            Console.WriteLine("Digite o nome do aluno e após a nota dele:");
+            for (int i=0;i<5;i++)
+            {
+                alunos.Add(Console.ReadLine());
+                notas.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+            Console.WriteLine("Notas maiores de 5 :");
+            foreach (int i in notas)
+            {
+                if (i > 5)
+                {
+                    Console.WriteLine("Aluno: " + alunos[notas.IndexOf(i)] + " Nota: " + i);
+                }
+            }
+            Console.ReadLine();
+        }
+    }
+}

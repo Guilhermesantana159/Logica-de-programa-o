@@ -1,0 +1,31 @@
+algoritmo "semnome"
+var
+X,Y,RES:INTEIRO
+FUNCAO SOMA(A,B:INTEIRO):INTEIRO
+VAR
+SOMAR,N:INTEIRO
+INICIO
+PARA N<-A ATE B PASSO 1 FACA
+SOMAR<-SOMAR+N
+FIMPARA
+RETORNE SOMAR
+FIMFUNCAO
+inicio
+ESCREVAL("=================================")
+ESCREVAL("           SUPERSOMADOR          ")
+ESCREVAL("=================================")
+ESCREVAL("DIGITE O PRIMEIRO VALOR:")
+LEIA(X)
+ESCREVAL("DIGITE O SEGUNDO VALOR:")
+LEIA(Y)
+RES<-SOMA(X,Y)
+ESCREVAL("O VALOR DA SOMA SERA:",RES)
+
+
+
+
+
+
+
+
+fimalgoritmo

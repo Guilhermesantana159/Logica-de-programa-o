@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> age = new List<int>();
+
+            Console.WriteLine("Insira 10 idades:");
+            for (int i=0;i<10;i++)
+            {
+                age.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+            Console.WriteLine("Posição: "+ age.IndexOf(age.Min())+ " Idade: " + age.Min());
+            Console.ReadLine();
+        }
+    }
+}
